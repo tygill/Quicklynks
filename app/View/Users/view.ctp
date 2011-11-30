@@ -4,6 +4,7 @@ echo '<h2>'.$user.'</h2>';
 //echo '<pre>';
 //print_r($links);
 //echo '</pre>';
+echo '<p> <a href="./logout">logout</a></p>';
 $first = true;
 foreach ($links as $link) {
     if (!$first) {

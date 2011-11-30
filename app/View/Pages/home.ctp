@@ -3,6 +3,8 @@
 	<p>For updates and important announcements, visit http://cakefest.org</p>
 </iframe>
 <h2>Sweet, "App" got Baked by CakePHP!</h2>
+<a href="./users/login">log in</a>
+<a href="./users/register">register </a>
 
 <?php
 App::uses('Debugger', 'Utility');

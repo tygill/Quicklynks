@@ -11,7 +11,7 @@ class UsersController extends AppController {
 
     public function view() {
         $id = $this->Auth->user('id');
-        $links = $this->Link->find('all', array('user_id' => $id));
+        $links = $this->Link->find('all', array('conditions' => array('user_id' => $id)));
         $this->set('id', $id);
         $this->set('user', $this->Auth->user('username'));
         $this->set('links', $links);
