@@ -1,12 +1,9 @@
 
-<iframe src="http://cakephp.org/bake-banner" width="830" height="160" style="overflow:hidden; border:none;">
-	<p>For updates and important announcements, visit http://cakefest.org</p>
-</iframe>
-<h2>Sweet, "App" got Baked by CakePHP!</h2>
-<?php echo $this->Html->para(null, $this->Html->link("log in", array('controller' => 'Users', 'action' => 'login'))); ?>
-<?php echo $this->Html->para(null, $this->Html->link("register", array('controller' => 'Users', 'action' => 'register'))); ?>
+<?php echo $this->Html->para(null, $this->Html->link("log in", array('controller' => 'users', 'action' => 'login'))); ?>
+<?php echo $this->Html->para(null, $this->Html->link("register", array('controller' => 'users', 'action' => 'register'))); ?>
 
 <?php
+/*
 App::uses('Debugger', 'Utility');
 if (Configure::read('debug') > 0):
 	Debugger::checkSecurityKeys();
@@ -111,3 +108,4 @@ if (isset($filePresent)):
 		APP . 'View' . DS . 'Pages' . DS . 'home.ctp.<br />',  APP . 'View' . DS . 'Layouts' . DS . 'default.ctp.<br />', APP . 'webroot' . DS . 'css');
 ?>
 </p>
+*/
