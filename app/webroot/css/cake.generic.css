@@ -59,9 +59,10 @@ h3 {
 	color: #2c6877;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 	font-size: 165%;
+    margin-bottom: 0;
 }
 h4 {
-	color: #993;
+	color: #367889;
 	font-weight: normal;
 }
 ul, li {
@@ -85,14 +86,20 @@ p {
 	color: #fff;
 	padding: 0px 30px;
 }
-#header h1 a {
+#header a {
 	color: #fff;
 	background: #003d4c;
 	font-weight: normal;
 	text-decoration: none;
 }
-#header h1 a:hover {
-	color: #fff;
+#header h3 .title-emphasis {
+    color: #bbb;
+}
+#header h3 .title-emphasis:hover {
+    /*color: #205A70;*/
+}
+#header a:hover {
+	/*color: #2c6877;*/
 	background: #003d4c;
 	text-decoration: underline;
 }
