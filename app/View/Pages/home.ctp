@@ -3,8 +3,8 @@
 	<p>For updates and important announcements, visit http://cakefest.org</p>
 </iframe>
 <h2>Sweet, "App" got Baked by CakePHP!</h2>
-<a href="./users/login">log in</a>
-<a href="./users/register">register </a>
+<?php echo $this->Html->para(null, $this->Html->link("log in", array('controller' => 'Users', 'action' => 'login'))); ?>
+<?php echo $this->Html->para(null, $this->Html->link("register", array('controller' => 'Users', 'action' => 'register'))); ?>
 
 <?php
 App::uses('Debugger', 'Utility');
