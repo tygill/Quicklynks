@@ -23,19 +23,16 @@ class LinksController extends AppController {
 	
 	public function delete($id = null) 
 	{
-        if (!$this->request->is('post')) {
-            //throw new MethodNotAllowedException();
+        $this->Link->id = $id;
+        if (!$this->Link->exists()) {
+            throw new NotFoundException(__('Link does not exist'));
         }
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+        if ($this->Link->delete()) {
+            $this->Session->setFlash(__('Link deleted'));
+            $this->redirect(array('controller' => 'users', 'action'=>'view'));
         }
-        if ($this->User->delete()) {
-            $this->Session->setFlash(__('User deleted'));
-            $this->redirect(array('controller' => 'pages', 'action'=>'display', 'home'));
-        }
-        $this->Session->setFlash(__('User was not deleted'));
-        $this->redirect(array('controller' => 'pages', 'action' => 'display', 'home'));
+        $this->Session->setFlash(__('Link could not be deleted'));
+        $this->redirect(array('controller' => 'users', 'action' => 'view'));
     }
 
 }
