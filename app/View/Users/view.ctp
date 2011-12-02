@@ -1,9 +1,7 @@
 <?php
 
 echo '<h2>'.$user.'</h2>';
-//echo '<pre>';
-//print_r($links);
-//echo '</pre>';
+
 echo $this->Html->para(null, $this->Html->link("logout", array('controller' => 'Users', 'action' => 'logout')));
 $first = true;
 echo '<p>';
